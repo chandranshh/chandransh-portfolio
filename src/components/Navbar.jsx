@@ -1,31 +1,36 @@
-import {
-  faLinkedinIn,
-  faGithub,
-  faCode,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { LinkedIn, GitHub } from "@mui/icons-material";
+import { Icon } from "@iconify/react";
 
 function Navbar() {
   return (
-    <div className="w-full h-20 flex justify-between px-4 items-center font-manrope font-light">
-      <div className="text-[#7d7d7d] cursor-pointer">Get in touch</div>
+    <div className="w-full h-20 flex justify-between px-4 items-center font-manrope font-light border-b border-[#72727279]">
+      <div className="text-[#7d7d7d] flex gap-4 items-center">
+        <div className="border border-gray-400 p-4 rounded-full cursor-pointer ">
+          <Icon icon="ion:mail" width="18" height="18" />
+        </div>
+        <span>Get in touch</span>
+      </div>
       <div>
         <div className="sm:hidden md:hidden lg:flex lg:gap-4 text-[#7d7d7d]">
-          <div className="cursor-pointer sm:hidden md:hidden ">LinkedIn</div>
-          <div>/</div>
-          <div className="cursor-pointer sm:hidden md:hidden ">GitHub</div>
-          <div>/</div>
-          <div className="cursor-pointer sm:hidden md:hidden ">LeetCode</div>
+          <div className="cursor-pointer hidden sm:block md:block">
+            LinkedIn
+          </div>
+          <div className="hidden sm:block md:block">/</div>
+          <div className="cursor-pointer hidden sm:block md:block">GitHub</div>
+          <div className="hidden sm:block md:block">/</div>
+          <div className="cursor-pointer hidden sm:block md:block">
+            LeetCode
+          </div>
         </div>
-        <div className="lg:hidden sm:flex sm:gap-2 md:flex md:gap-2 text-[#7d7d7d]">
+        <div className="lg:hidden flex gap-4 text-[#7d7d7d]">
           <div>
-            <FontAwesomeIcon icon={faLinkedinIn} size="xs" />
+            <LinkedIn />
           </div>
           <div>
-            <FontAwesomeIcon icon={faGithub} size="xs" />
+            <GitHub />
           </div>
           <div>
-            <FontAwesomeIcon icon={faCode} size="xs" />
+            <Icon icon="simple-icons:leetcode" width="24" height="24" />
           </div>
         </div>
       </div>
